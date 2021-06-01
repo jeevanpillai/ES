@@ -1,0 +1,10 @@
+[
+    {
+        "name" : {"time-complexity, complexity, time"},
+        "definition": "Denoted as T(n) where it is the sum of running time each line executed",
+        "notation": "T(n)"
+    },
+    {
+
+    }
+]

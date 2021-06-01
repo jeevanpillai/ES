@@ -1,0 +1,36 @@
+{
+  "iterative-algorithm": {
+    "definition": "Algorithm that uses loop iteration"
+  },
+  "recursive-algorithm": {
+    "definition": "Algorithm that calls itself in its method until a condition is achieved"
+  },
+  "time-complexity": {
+      "definition": "Denoted as T(n) where it is the sum of running time each line executed",
+      "notation": "T(n)"
+  },
+  "worst-case-running-time": {
+      "definition": "The longest possible time complexity, T(n)"
+  },
+  "best-case-running-time": {
+      "definition": "The shortest possible time complexity, T(n)"
+  },
+  "big-oh": {
+      "definition": "Upper bound of a function",
+      "notation": "f(n) = O(g(n)), f(n) is a member of the set of g(n) such that f(n) ≤ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
+  },
+  "big-omega": {
+      "definition": "Lower bound of a function",
+      "notation": "f(n) = Ω(g(n)), such that f(n) ≥ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
+  },
+  "big-theta": {
+      "definition": "Average bound of a function",
+      "notation": "f(n) = Θ(g(n)) such that c1g(n) ≤ f(n) ≤ c2g(n) ; n ≥ n0 , n0 ≥ 1 and c1, c2 > 0"
+  },
+  "probabilistic-analysis": {
+    "definition": "Probabilistic analysis is a technique to gain insight into a problem"
+  },
+  "randomized-algorithm": {
+    "definition": "Randomized algorithm is an algorithm that employs a degree of randomness as part of its logic"
+  }
+}
