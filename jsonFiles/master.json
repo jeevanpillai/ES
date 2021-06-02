@@ -158,6 +158,51 @@
         "purpose": "Finds shortest path from S to:   another vertex   every other vertex ",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/vqpKCnV/Bellman-Ford-Algorithm.png"
+    },
+    "Rabin karp": {
+        "time-complexity": "if best case it is O(m+n) while if it is worst case it is O(mn)",
+        "definition": "A string matching algorithm using an hashing function",
+        "pseudocode" : " ",
+        "pseudocode-img": "https://i.ibb.co/LpZVvkT/rabin-karp.png",
+        "rank": "2"
+    },
+    "Knuth-Morris-Pratt": {
+        "time-complexity": "O(n+m)",
+        "definition": "KMP's algorithm  compares the pattern to the text in left-to-right more intelligently",
+        "pseudocode" : " ",
+        "pseudocode-img": "https://i.ibb.co/hDWnXHC/kmp-pseudo.png",
+        "rank": "1"
+    },
+    "Standard Trie": {
+        "time-complexity": " ",
+        "definition": "The standard trie for a set of strings S is an ordered tree such that each node but the root is labeled with a character. The children of a node are alphabetically ordered. The paths from the external nodes to the root yield the strings of S",
+        "pseudocode" : " ",
+        "pseudocode-img": "https://i.ibb.co/F6J1mTm/standard-tries.png"
+    },
+    "Compressed Trie": {
+        "definition": "Tries with nodes of degree at least 2 and it is obtained by standard tries by compressing chains of redundant nodes.",
+        "how-work" : " ",
+        "how-work--img": "https://i.ibb.co/zFbBPD8/compressed-trie.png"
+    },
+    "Suffix Trie": {
+        "time-complexity": "Compact representation of the suffix trie for a string S of size n from an alphabet of size d. Uses O(n) space. Supports arbitrary pattern matching queries in S in O(dm) time, where m is the size of the pattern. Can be constructed in O(n) time",
+        "definition": "A suffix trie is a compressed trie for all the suffixes of a text. Suffix trie are a space-efficient data structure to store a string that allows many kinds of queries to be answered quickly",
+        "how-work" : " ",
+        "how-work-img": "https://i.ibb.co/xm4vWfb/suffix-trie.png"
+    },
+    "Brute Force": {
+        "time-complexity": "O(nm)",
+        "definition": "The brute-force pattern  matching algorithm compares the pattern P with the text T  for each possible shift of P relative to T, until either a match is found, or all placements of the pattern have been tried",
+        "pseudocode" : " ",
+        "pseudocode-img": "https://i.ibb.co/b6mN8cK/bruteforce.png",
+        "rank": "4"
+    },
+    "Finite Automaton": {
+        "time-complexity": "O(n)",
+        "definition": "In order to specify the string-matching automaton corresponding to a given pattern P [1: :m], we first define an auxiliary function , called the suffix function corresponding to P. The function σ maps Σ* to {0, 1, . . ., m} such that σ (x) is the length of the longest prefix of P that is also a suffix of x: σ (x) max{ k : Pk     x}",
+        "pseudocode" : " ",
+        "pseudocode-img": "https://i.ibb.co/syBtWKR/finite-automaton.png",
+        "rank": "3"
     }
   }
   
