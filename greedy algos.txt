@@ -1,0 +1,24 @@
+﻿{
+"greedy-algorithm": {
+	"definition":"A greedy algorithm obtains an optimal solution to a problem by making a sequence of choices. At each decision point, the algorithm makes choice that seems best at the moment. That is, it makes a locally optimal choice in the hope that this choice will lead to a globally optimal solution. There are two properties that a problem must have for it to qualify for a greedy solution: Greedy-choice property and Optimal substructure",
+	"limitations" : "Greedy algorithms do not always yeild optimal solutions. An example showing that the greedy strategy does not work is the 0-1 knapsack problem. (a) The thief must select a subset of the three items shown whose weight must not exceed 50 pounds. (b) The optimal subset includes items 2 and 3. Any solution with item 1 is suboptimal, even though item 1 has the greatest value per pound. (c) For the fractional knapsack problem, taking the items in order of greatest value per pound yields an optimal solution.",
+	"limitations-img": "https://i.ibb.co/HqpmVZB/Untitled1.png"
+	},
+"greedy-choice-property": {
+	"definition":"A problem is said to have the Greedy-choice property when a globally optimal solution can be arrived at by making a locally optimal (greedy) choice"
+	},
+"optimal-substructure": {
+	"definition":"A problem exhibits optimal substructure if an optimal solution to the problem contains within its optimal solutions to subproblems"
+  },
+"huffman-code": {
+	"definition":"Huffman codes compress data very effectively: savings of 20% to 90% are typical, depending on the characteristics of the data being compressed. We consider the data to be a sequence of characters. Huffman’s greedy algorithm uses a table giving how often each character occurs (i.e. its frequency) to build up an optimal way of representing each character as a binary string.",
+	"how-work" : "Suppose we have a 100,000-character data file that we wish to store compactly. We observe that the characters in the file occur with the frequencies given by figure below. That is, only 6 different characters appear, and the character a occurs 45,000 times. Figure 16.3 A character-coding problem. A data file of 100,000 characters contains only the characters a–f, with the frequencies indicated. If we assign each character a 3-bit codeword, we encode the file in 300,000 bits. Using the variable-length code shown, we can encode the file in only 224,00 bits",
+	"how-work-img":"https://i.ibb.co/dmbfdx0/Untitled2.png"
+  }
+}
+
+
+
+
+
+
