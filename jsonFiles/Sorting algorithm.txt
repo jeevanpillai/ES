@@ -1,0 +1,53 @@
+{
+  "Bubble sort":{
+         "time-complexity" : "O(n^2)",
+         "definition" : "compares item with the next item, and swaps them if required",
+          "pseudocode" : "" 
+
+	},
+  "Counting sort":{
+         "time-complexity" : "O(n+m)",
+         "definition" : "creates a count array and then a new array where the input will be sorted in it.",
+          "pseudocode" : "countingSort(array, size)\n
+max --find largest element in array\n
+initialize count array with all zeros for loop (from j = (0 to size)) ---------O(n)\n
+find the total count of each unique element and\n
+store the count at jth index in count array for loop(from (1 to size of count array)) -----O(m)\n
+find the cumulative sum and store it in count array itself while loop(from (size down to 1)) ----------O(n)\n
+restore the elements to array\n
+decrease count of each element restored by 1" 
+       },
+     "Radix sort":{
+         "time-complexity":"O(dn)",
+         "definition" : "Sort by one's digit, then ten's digit, then hundred's digit",
+          "pseudocode" : "__get_num_digits(A): -- A is the list of input\n
+This function is to get number of bits for the highest value in the array\n
+Initialize m to 0. For item in A: -------------- O(n)\n
+Compare m with item in A to find the max\n
+Return length of sting(m) radix(A): This function is to insert A into radix: Initialize num_digits as number of bits. for digit in range(0, num_digits):\n -----------------------O(d) Create 10 buckets with each having a list. ---- create list of 10 buckets\n
+for item in A: ------------------------ O(n) Find bucket number by this formula num = item // 10** (digit) % 10 ----------------------num is the bucket number\n
+ B[num].append(item) --- append item in list according to correct bucket\n
+ assign back to A, modified list then flattens the list --flatten the list into single list\n
+ Return the modified list to A"
+},
+        "Bucket sort":{
+         "time-complexity" : "O(n)",
+          "definition" : "Divide into equal-sized bucket",
+          "pseudocode" : "BUCKET-SORT(A)\n
+                          let B[0..n-1]be a new array\n
+                          n = A.length\n
+                          for i = 0 to n-1\n
+                              make B[i] an empty list\n
+                          for i = 1 to n\n
+                              insert A[i] into list B[(lower_ceiling)nA[i]]\n
+                          for i = 0 to n-1\n
+                              sort list B[i] with insertion sort\n
+                          concatenate the lists B[0],B[1],...,B[n-1] together in order
+"
+},
+     "Shell Sort":{
+         "time-complexity": "",
+          "definition" : "Shell sort is a generalization of the insertion sort. It does sorting by comparing items that are distant apart rather than next to each other. If we start comparing n elements that are at certain distant apart. In each pass, the value of gap is reduced until the last pass where gap=1. In the last pass, the sort is like insertion sort
+"
+}
+}

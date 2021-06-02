@@ -1,49 +1,39 @@
 import json
 
-with open('jsonFiles/intro to algo.json') as file:
+with open('jsonFiles/master.json') as file:
   data = json.load(file)
 
-#print(data["iterative-algorithm"]["definition"])
+words = []
+query = ""
 
-query = input("Enter your search query: ")
-words = query.split(" ")
+while (query != "/stop"):
+  query = input("Enter your search query: ")
+  words = query.split(" ")
 
-foundObject = ""
-foundKey = ""
-att = []
+  str_object, str_attribute = "", ""
 
-if "of" in words:
-  str = ""
-  for i in range(words.index("of")+1, len(words)):
-    str += words[i]
-    if(i != len(words)-1):
-      str += "-"
-  words.append(str);
+  if("what" in words and "is" in words):    #query 1: what is the <key> of <object>   OR   what is <object>
+    
+    if ("the" in words):
+      for i in range(words.index("of")+1, len(words)):
+        str_object += words[i]
+        if(i != len(words)-1):
+          str_object += "-"
+    else:
+      for i in range(words.index("is")+1, len(words)):
+        str_object += words[i]
+        if(i != len(words)-1):
+          str_object += "-"
 
-for var in data.keys():
-  for key in data[var].keys():
-    if key not in att:
-      att.append(key)
+    if("the" in words):
+      for i in range(words.index("the")+1, words.index("of")):
+        str_attribute += words[i]
+        if(i != len(words)-1):
+          str_attribute += "-"
+    else:
+      str_attribute = "definition"
 
-print(att)
-
-for word in words:
-  for key in data.keys():
-    if key == word:
-      foundObject = key
-
-print("")
-
-for word in words:
-  for key in att:
-    if key == word:
-      foundKey = key
-
-print("\n")
-
-print("Found Object: ", foundObject)
-print("Found Key: ", foundKey)
-print(data[foundObject][foundKey])
+    print(data[str_object][str_attribute])
 
 
 ##what is the definition of iterative-algorithm 

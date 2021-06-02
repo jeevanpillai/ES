@@ -1,0 +1,75 @@
+{
+    "iterative-algorithm": {
+      "definition": "Algorithm that uses loop iteration"
+    },
+    "recursive-algorithm": {
+      "definition": "Algorithm that calls itself in its method until a condition is achieved"
+    },
+    "time-complexity": {
+        "definition": "Denoted as T(n) where it is the sum of running time each line executed",
+        "notation": "T(n)"
+    },
+    "worst-case-running-time": {
+        "definition": "The longest possible time complexity, T(n)"
+    },
+    "best-case-running-time": {
+        "definition": "The shortest possible time complexity, T(n)"
+    },
+    "big-oh": {
+        "definition": "Upper bound of a function",
+        "notation": "f(n) = O(g(n)), f(n) is a member of the set of g(n) such that f(n) ≤ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
+    },
+    "big-omega": {
+        "definition": "Lower bound of a function",
+        "notation": "f(n) = Ω(g(n)), such that f(n) ≥ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
+    },
+    "big-theta": {
+        "definition": "Average bound of a function",
+        "notation": "f(n) = Θ(g(n)) such that c1g(n) ≤ f(n) ≤ c2g(n) ; n ≥ n0 , n0 ≥ 1 and c1, c2 > 0"
+    },
+    "probabilistic-analysis": {
+      "definition": "Probabilistic analysis is a technique to gain insight into a problem"
+    },
+    "randomized-algorithm": {
+      "definition": "Randomized algorithm is an algorithm that employs a degree of randomness as part of its logic"
+    },
+    "greedy-algorithm": {
+        "definition":"A greedy algorithm obtains an optimal solution to a problem by making a sequence of choices. At each decision point, the algorithm makes choice that seems best at the moment. That is, it makes a locally optimal choice in the hope that this choice will lead to a globally optimal solution. There are two properties that a problem must have for it to qualify for a greedy solution: Greedy-choice property and Optimal substructure",
+        "limitations" : "Greedy algorithms do not always yeild optimal solutions. An example showing that the greedy strategy does not work is the 0-1 knapsack problem. (a) The thief must select a subset of the three items shown whose weight must not exceed 50 pounds. (b) The optimal subset includes items 2 and 3. Any solution with item 1 is suboptimal, even though item 1 has the greatest value per pound. (c) For the fractional knapsack problem, taking the items in order of greatest value per pound yields an optimal solution.",
+        "limitations-img": "https://i.ibb.co/HqpmVZB/Untitled1.png"
+        },
+    "greedy-choice-property": {
+        "definition":"A problem is said to have the Greedy-choice property when a globally optimal solution can be arrived at by making a locally optimal (greedy) choice"
+        },
+    "optimal-substructure": {
+        "definition":"A problem exhibits optimal substructure if an optimal solution to the problem contains within its optimal solutions to subproblems"
+      },
+    "huffman-code": {
+        "definition":"Huffman codes compress data very effectively: savings of 20% to 90% are typical, depending on the characteristics of the data being compressed. We consider the data to be a sequence of characters. Huffman’s greedy algorithm uses a table giving how often each character occurs (i.e. its frequency) to build up an optimal way of representing each character as a binary string.",
+        "how-work" : "Suppose we have a 100,000-character data file that we wish to store compactly. We observe that the characters in the file occur with the frequencies given by figure below. That is, only 6 different characters appear, and the character a occurs 45,000 times. Figure 16.3 A character-coding problem. A data file of 100,000 characters contains only the characters a–f, with the frequencies indicated. If we assign each character a 3-bit codeword, we encode the file in 300,000 bits. Using the variable-length code shown, we can encode the file in only 224,00 bits",
+        "how-work-img":"https://i.ibb.co/dmbfdx0/Untitled2.png"
+      },
+    "hash-table": {
+        "definition":"A hash table is an effective data structure for implementing dictionaries. Hash tables store data as key:value pairs",
+        "definition-img":"https://www.cdn.geeksforgeeks.org/wp-content/uploads/hmap.png",
+        "time-complexity":"O(1)",
+        "how-work":"A hash-table uses direct addressing of an array to retreive data in O(1) time. Before being stored in an the direct-address table, the key is hashed (with a hash-function) to obtain it's position in the direct-access table. When requesting for key, the request is hashed, and the value stored at the location of the hash is then returned as the matching value for the given input key.",
+        "limitations":"One limitation of hash tables are that if the input set is too large, we lose the benefits of direct-addressing. Time-complexity them increases to up to O(n)"
+        },
+    "direct-addressing": {
+        "definition":"Direct Addressing uses a Direct-address table that stores values at fixed points in an array, where the position in which a value is stored is based on the hash genrated of its key thus, allowing an access time of O(1)",
+        "definition-img":"https://www.cdn.geeksforgeeks.org/wp-content/uploads/hmap.png"
+        },
+    "hash-fuction": {
+        "definition":"A hash function maps a given key to a set range of m slots in a direct-access table. A good hash function satisfies (approximately) the assumption of simple uniform hashing, where each key is equally likely to hash to any of the m slots, independently of where any other keys are hashed to. Some of the hashing methods include the division method and the multiplication method",
+        "definition-img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hash_table_4_1_1_0_0_1_0_LL.svg/1200px-Hash_table_4_1_1_0_0_1_0_LL.svg.png",
+        "how-work": "Since arrays are addressed within the set of natural numbers, a hash function works to interpret the input key as a natural number. For example, a given character string will be represented as an integer"
+    },"binary-search-tree": {
+        "definition" : "Binary Search Tree is a node-based binary tree data structure which has the following properties: 1, The left subtree of a node contains only nodes with keys lesser than the node’s key. 2, The right subtree of a node contains only nodes with keys greater than the node’s key. 3,The left and right subtree each must also be a binary search tree.",
+        "definition-img" : "https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png",
+        "how-work" : "To search for the key 13 in the tree, we follow the path 15 -> 6 -> 7 -> 13 from the root. The minimum key in the tree is 2, which is found by following left pointers from the root. The maximum key 20 is found by following right pointers from the root.The successor of the node with key 15 is the node with key 17, since it is the minimum key in the right subtree of 15. The node with key 13 has no right subtree, and thus its successor is its lowest ancestor whose leR child is also an ancestor. In this case, the node with key 15 is its successor.",
+        "how-work-link": "https://i.ibb.co/6mWHpQ1/Untitled.png"
+        }
+      
+  }
+  
