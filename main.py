@@ -1,9 +1,9 @@
 import json
 
-with open('intro to algo.json') as file:
+with open('jsonFiles/intro to algo.json') as file:
   data = json.load(file)
 
-print(data["iterative-algorithm"]["definition"])
+#print(data["iterative-algorithm"]["definition"])
 
 query = input("Enter your search query: ")
 words = query.split(" ")
