@@ -64,12 +64,13 @@
         "definition":"A hash function maps a given key to a set range of m slots in a direct-access table. A good hash function satisfies (approximately) the assumption of simple uniform hashing, where each key is equally likely to hash to any of the m slots, independently of where any other keys are hashed to. Some of the hashing methods include the division method and the multiplication method",
         "definition-img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hash_table_4_1_1_0_0_1_0_LL.svg/1200px-Hash_table_4_1_1_0_0_1_0_LL.svg.png",
         "how-work": "Since arrays are addressed within the set of natural numbers, a hash function works to interpret the input key as a natural number. For example, a given character string will be represented as an integer"
-    },"binary-search-tree": {
+        },
+    "binary-search-tree": {
         "definition" : "Binary Search Tree is a node-based binary tree data structure which has the following properties: 1, The left subtree of a node contains only nodes with keys lesser than the node’s key. 2, The right subtree of a node contains only nodes with keys greater than the node’s key. 3,The left and right subtree each must also be a binary search tree.",
         "definition-img" : "https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png",
         "how-work" : "To search for the key 13 in the tree, we follow the path 15 -> 6 -> 7 -> 13 from the root. The minimum key in the tree is 2, which is found by following left pointers from the root. The maximum key 20 is found by following right pointers from the root.The successor of the node with key 15 is the node with key 17, since it is the minimum key in the right subtree of 15. The node with key 13 has no right subtree, and thus its successor is its lowest ancestor whose leR child is also an ancestor. In this case, the node with key 15 is its successor.",
         "how-work-link": "https://i.ibb.co/6mWHpQ1/Untitled.png"
-        }
-      
+        },
+    "test-entry": "test"  
   }
   
