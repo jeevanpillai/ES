@@ -7,7 +7,7 @@
     },
     "time-complexity": {
         "definition": "Denoted as T(n) where it is the sum of running time each line executed",
-        "notation": "T(n)"
+        "notation": "The notation for time complexity is T(n)"
     },
     "worst-case-running-time": {
         "definition": "The longest possible time complexity, T(n)"
@@ -16,15 +16,15 @@
         "definition": "The shortest possible time complexity, T(n)"
     },
     "big-oh": {
-        "definition": "Upper bound of a function",
+        "definition": "This term is defined as upper bound of a function",
         "notation": "f(n) = O(g(n)), f(n) is a member of the set of g(n) such that f(n) ≤ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
     },
     "big-omega": {
-        "definition": "Lower bound of a function",
+        "definition": "This term represents the lower bound of a function",
         "notation": "f(n) = Ω(g(n)), such that f(n) ≥ cg(n) ; n ≥ n0 , n0 ≥ 1 and c > 0"
     },
     "big-theta": {
-        "definition": "Average bound of a function",
+        "definition": "This term represents the average bound of a function",
         "notation": "f(n) = Θ(g(n)) such that c1g(n) ≤ f(n) ≤ c2g(n) ; n ≥ n0 , n0 ≥ 1 and c1, c2 > 0"
     },
     "probabilistic-analysis": {
@@ -52,7 +52,7 @@
     "hash-table": {
         "definition":"A hash table is an effective data structure for implementing dictionaries. Hash tables store data as key:value pairs",
         "definition-img":"https://www.cdn.geeksforgeeks.org/wp-content/uploads/hmap.png",
-        "time-complexity":"O(1)",
+        "time-complexity":"The time complexity of Hash Table is O(1)",
         "how-work":"A hash-table uses direct addressing of an array to retreive data in O(1) time. Before being stored in an the direct-address table, the key is hashed (with a hash-function) to obtain it's position in the direct-access table. When requesting for key, the request is hashed, and the value stored at the location of the hash is then returned as the matching value for the given input key.",
         "limitations":"One limitation of hash tables are that if the input set is too large, we lose the benefits of direct-addressing. Time-complexity them increases to up to O(n)"
     },
@@ -69,18 +69,18 @@
         "definition" : "Binary Search Tree is a node-based binary tree data structure which has the following properties: 1, The left subtree of a node contains only nodes with keys lesser than the node’s key. 2, The right subtree of a node contains only nodes with keys greater than the node’s key. 3,The left and right subtree each must also be a binary search tree.",
         "definition-img" : "https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png",
         "how-work" : "To search for the key 13 in the tree, we follow the path 15 -> 6 -> 7 -> 13 from the root. The minimum key in the tree is 2, which is found by following left pointers from the root. The maximum key 20 is found by following right pointers from the root.The successor of the node with key 15 is the node with key 17, since it is the minimum key in the right subtree of 15. The node with key 13 has no right subtree, and thus its successor is its lowest ancestor whose leR child is also an ancestor. In this case, the node with key 15 is its successor.",
-        "how-work-link": "https://i.ibb.co/6mWHpQ1/Untitled.png"
+        "how-work-img": "https://i.ibb.co/6mWHpQ1/Untitled.png"
     },
     "test-entry": {
-        "definition":"this is a test entry"
+        "definition":"this is a test entry.beep boop"
     },
     "divide-and-conquer": {
-        "how-work": "Break the problem into several sub-problems that are similar to the original problem but smaller in size, solve the problem recursively , and then combine these solutions to create a solution of the original problem.",
+        "how-work": "This algorithm breaks the problem into several sub-problems that are similar to the original problem but smaller in size, solve the problem recursively , and then combine these solutions to create a solution of the original problem.",
         "example": "Merge Sort, Quick Sort, Heap Sort, Max Heap,Binary Search"
     },
     "mergesort": {
-        "time-complexity": "O(nlogn)",
-        "definition": "The merge() function is used for merging two halves The Mergesort() function recursively call itself to divide the array till size becomes one",
+        "time-complexity": "The time complexity for Merge Sort Algorithm is O(nlogn)",
+        "definition": "The merge() function is used for merging two halves while The Mergesort() function recursively call itself to divide the array till size becomes one",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/TBQQCdJ/Desktop-Screenshot-2021-06-01-10-23-17-21.png"
     },
@@ -91,12 +91,12 @@
         "how-work-img": "https://i.ibb.co/7NbFM4m/Quick-Sort-Example.png"
     },
     "heapsort": {
-        "time-complexity": "Get Max/Min Element : O(1)   Remove/Insert an element for both Min/Max Heap : O(log n)    Heapsort : O(nlog n) ",
+        "time-complexity": "Get Max/Min Element : O(1) , Remove/Insert an element for both Min/Max Heap : O(log n)  ,  Heapsort : O(nlog n) ",
         "definition": "A Heap is a tree-based data structure. Each node of the tree corresponds to an element of the array.",
-        "how-work": "Max Heap - Key present at root node must be greatest among all children. This property must then be true for each sub- tree    Min Heap - Key present at root node must be the minimum among all children. This property must then be true for each sub-tree"
+        "how-work": "Max Heap - Key present at root node must be greatest among all children. This property must then be true for each sub-tree. Min Heap - Key present at root node must be the minimum among all children. This property must then be true for each sub-tree"
     },
     "binary-search": {
-        "time-complexity": "O(log n)",
+        "time-complexity": "The time complexity for Binary Search is O(log n)",
         "definition": "Binary Search finds the position of a target value within a sorted array by comparing the target value to the middle element of the array",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/gFcPXqh/Binary-Search-Example.png"
@@ -104,12 +104,12 @@
     "graph": {
         "terminologies": "Graph, G = (V,E) consist of set of vertices V and edges E. Edges are connections between vertices. Vertices are called neighbours if they are adjacent and connected by an edge.   This is written as v = {1,2,3,4}  and E={(1,2),(2,2)}",
         "definition": "A graph is a non-linear data structure that can also capture relationship between data",
-        "how-work": "Directed Graph : Edges of graph represent specific direction from one vortex to the other   Undirected Graphs : Edges have no specific direction Weighted Directed Graphs : Edges represent specific direction and weight   Undirected Weighted Graph: No specific direction on edges but theres weight for each edge ",
+        "how-work": "Directed Graph : Edges of graph represent specific direction from one vortex to the other. Undirected Graphs : Edges have no specific direction.  Weighted Directed Graphs : Edges represent specific direction and weight.   Undirected Weighted Graph: No specific direction on edges but theres weight for each edge ",
         "representation-img": "https://i.ibb.co/tpF1JRb/Adjacency-List-c-Adjacency-Matrix-b.png",
         "representation": " "
     },
     "depth-first-search": {
-        "definition": "Depth First Search (DFS) uses the stack for storing the visited vertices. Uses a recursive fashion where vertices are explored along a path",
+        "definition": "Depth First Search (DFS) uses the stack for storing the visited vertices.It uses a recursive fashion where vertices are explored along a path",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/ZWmZsxM/Depth-First-Search.png"
     },
@@ -125,7 +125,7 @@
     },
     "minimum-spanning-trees": {
         "definition": "Minimum spanning tree is a spanning tree that has minimum weight than all other spanning trees of the same graph.",
-        "how-work": "Kruskal's Algortihm & Prim's Algorithm"
+        "how-work": "The two algorithm used in this form of tree are Kruskal's Algortihm & Prim's Algorithm"
     },
     "prim's-algorithm": {
         "definition": "This algorithm selects the root vertex, then selects the shortest edge connected to visited vertices. As it traverses this way, it generates the minimum cost spanning tree starting from the root node",
@@ -139,66 +139,66 @@
     },
     "shortest-path": {
         "definition": "Shortest path problem is an optimization problem that can be solved using greedy (Djikstra's Algorithm) or dynamic programming (Bellman-Ford Algorithm) approach",
-        "how-work": "Single-Source Shortest Paths & All-Pairs Shortest Paths"
+        "how-work": "This either evaluates the Single-Source Shortest Paths or All-Pairs Shortest Paths"
     },
     "single-source-shortest-path": {
-        "how-work": "The aim is to find shortest path from S to :   Another vertex   All other vertices",
+        "how-work": "The aim is to find shortest path from S to Another vertex or All other vertices",
         "relax": "Essentially the shortest calculated paths from two locations ",
         "terminologies": " ",
         "terminologies-img": "https://i.ibb.co/C1hzZ6p/Single-Source-Shortest-Path-Terminologies.png"
     },
     "dijkstra's-algorithm": {
         "definition": "This algorithm solves the single-source shortest paths problems on weighted and directed graphs, namely G = (V,E) where all edge-weights are non-negative.",
-        "purpose": "Finds shortest path from S to:   another vertex   every other vertex ",
+        "purpose": "Finds shortest path from S to Another vertex or Every other vertex ",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/ykSt4Vh/Dijkstra-s-Algorithm-Example.png"
     },
     "bellman-ford-algorithm": {
-        "definition": "This algorithm applies dynamis programming strategy where we try out all possible paths then select the best solution. This algorithm however works in negative edges too",
-        "purpose": "Finds shortest path from S to:   another vertex   every other vertex ",
+        "definition": "This algorithm applies dynamic programming strategy where we try out all possible paths then select the best solution. This algorithm however works in negative edges too",
+        "purpose": "Finds shortest path from S to another vertex or every other vertex ",
         "how-work": " ",
         "how-work-img": "https://i.ibb.co/vqpKCnV/Bellman-Ford-Algorithm.png"
     },
-    "Rabin karp": {
-        "time-complexity": "if best case it is O(m+n) while if it is worst case it is O(mn)",
-        "definition": "A string matching algorithm using an hashing function",
+    "rabin-karp": {
+        "time-complexity": "In a best case scenario, the time complexity is O(m+n) while if it is in its worst case scenario it is O(mn)",
+        "definition": "The Rabin-Karp Algoritrhm string matches algorithm using an hashing function",
         "pseudocode" : " ",
         "pseudocode-img": "https://i.ibb.co/LpZVvkT/rabin-karp.png",
         "rank": "2"
     },
-    "Knuth-Morris-Pratt": {
-        "time-complexity": "O(n+m)",
+    "knuth-morris-pratt": {
+        "time-complexity": "The time complexity for the Knuth-Morris-Pratt  Algorithm is O(n+m)",
         "definition": "KMP's algorithm  compares the pattern to the text in left-to-right more intelligently",
         "pseudocode" : " ",
         "pseudocode-img": "https://i.ibb.co/hDWnXHC/kmp-pseudo.png",
         "rank": "1"
     },
-    "Standard Trie": {
-        "time-complexity": " ",
+    "standard-trie": {
+        "time-complexity": "The time complexity for standard trie is O(mn) ",
         "definition": "The standard trie for a set of strings S is an ordered tree such that each node but the root is labeled with a character. The children of a node are alphabetically ordered. The paths from the external nodes to the root yield the strings of S",
         "pseudocode" : " ",
         "pseudocode-img": "https://i.ibb.co/F6J1mTm/standard-tries.png"
     },
-    "Compressed Trie": {
-        "definition": "Tries with nodes of degree at least 2 and it is obtained by standard tries by compressing chains of redundant nodes.",
+    "compressed-trie": {
+        "definition": "This are tries with nodes of degree at least 2 and it is obtained by standard tries by compressing chains of redundant nodes.",
         "how-work" : " ",
         "how-work--img": "https://i.ibb.co/zFbBPD8/compressed-trie.png"
     },
-    "Suffix Trie": {
+    "suffix-trie": {
         "time-complexity": "Compact representation of the suffix trie for a string S of size n from an alphabet of size d. Uses O(n) space. Supports arbitrary pattern matching queries in S in O(dm) time, where m is the size of the pattern. Can be constructed in O(n) time",
         "definition": "A suffix trie is a compressed trie for all the suffixes of a text. Suffix trie are a space-efficient data structure to store a string that allows many kinds of queries to be answered quickly",
         "how-work" : " ",
         "how-work-img": "https://i.ibb.co/xm4vWfb/suffix-trie.png"
     },
-    "Brute Force": {
-        "time-complexity": "O(nm)",
+    "brute-force": {
+        "time-complexity": "The time complexity for the Brute-Force pattern amtching algorithm is O(nm)",
         "definition": "The brute-force pattern  matching algorithm compares the pattern P with the text T  for each possible shift of P relative to T, until either a match is found, or all placements of the pattern have been tried",
         "pseudocode" : " ",
         "pseudocode-img": "https://i.ibb.co/b6mN8cK/bruteforce.png",
         "rank": "4"
     },
-    "Finite Automaton": {
-        "time-complexity": "O(n)",
+    "finite-automaton": {
+        "time-complexity": "The time complexity for the finite automaton is O(n)",
         "definition": "In order to specify the string-matching automaton corresponding to a given pattern P [1: :m], we first define an auxiliary function , called the suffix function corresponding to P. The function σ maps Σ* to {0, 1, . . ., m} such that σ (x) is the length of the longest prefix of P that is also a suffix of x: σ (x) max{ k : Pk     x}",
         "pseudocode" : " ",
         "pseudocode-img": "https://i.ibb.co/syBtWKR/finite-automaton.png",
