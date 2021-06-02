@@ -33,7 +33,10 @@ while (query != "/stop"):
     else:
       str_attribute = "definition"
 
-    print(data[str_object][str_attribute])
+    if(str_object != "" and str_attribute != ""):
+      print(data[str_object][str_attribute])
+    else:
+      print("query not found")
 
 
 ##what is the definition of iterative-algorithm 
