@@ -71,6 +71,8 @@
         "how-work" : "To search for the key 13 in the tree, we follow the path 15 -> 6 -> 7 -> 13 from the root. The minimum key in the tree is 2, which is found by following left pointers from the root. The maximum key 20 is found by following right pointers from the root.The successor of the node with key 15 is the node with key 17, since it is the minimum key in the right subtree of 15. The node with key 13 has no right subtree, and thus its successor is its lowest ancestor whose leR child is also an ancestor. In this case, the node with key 15 is its successor.",
         "how-work-link": "https://i.ibb.co/6mWHpQ1/Untitled.png"
         },
-    "test-entry": "test"  
+    "test-entry": {
+        "definition":"this is a test entry"
+        }
   }
   
