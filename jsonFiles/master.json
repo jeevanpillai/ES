@@ -37,42 +37,127 @@
         "definition":"A greedy algorithm obtains an optimal solution to a problem by making a sequence of choices. At each decision point, the algorithm makes choice that seems best at the moment. That is, it makes a locally optimal choice in the hope that this choice will lead to a globally optimal solution. There are two properties that a problem must have for it to qualify for a greedy solution: Greedy-choice property and Optimal substructure",
         "limitations" : "Greedy algorithms do not always yeild optimal solutions. An example showing that the greedy strategy does not work is the 0-1 knapsack problem. (a) The thief must select a subset of the three items shown whose weight must not exceed 50 pounds. (b) The optimal subset includes items 2 and 3. Any solution with item 1 is suboptimal, even though item 1 has the greatest value per pound. (c) For the fractional knapsack problem, taking the items in order of greatest value per pound yields an optimal solution.",
         "limitations-img": "https://i.ibb.co/HqpmVZB/Untitled1.png"
-        },
+    },
     "greedy-choice-property": {
         "definition":"A problem is said to have the Greedy-choice property when a globally optimal solution can be arrived at by making a locally optimal (greedy) choice"
-        },
+    },
     "optimal-substructure": {
         "definition":"A problem exhibits optimal substructure if an optimal solution to the problem contains within its optimal solutions to subproblems"
-      },
+    },
     "huffman-code": {
         "definition":"Huffman codes compress data very effectively: savings of 20% to 90% are typical, depending on the characteristics of the data being compressed. We consider the data to be a sequence of characters. Huffman’s greedy algorithm uses a table giving how often each character occurs (i.e. its frequency) to build up an optimal way of representing each character as a binary string.",
         "how-work" : "Suppose we have a 100,000-character data file that we wish to store compactly. We observe that the characters in the file occur with the frequencies given by figure below. That is, only 6 different characters appear, and the character a occurs 45,000 times. Figure 16.3 A character-coding problem. A data file of 100,000 characters contains only the characters a–f, with the frequencies indicated. If we assign each character a 3-bit codeword, we encode the file in 300,000 bits. Using the variable-length code shown, we can encode the file in only 224,00 bits",
         "how-work-img":"https://i.ibb.co/dmbfdx0/Untitled2.png"
-      },
+    },
     "hash-table": {
         "definition":"A hash table is an effective data structure for implementing dictionaries. Hash tables store data as key:value pairs",
         "definition-img":"https://www.cdn.geeksforgeeks.org/wp-content/uploads/hmap.png",
         "time-complexity":"O(1)",
         "how-work":"A hash-table uses direct addressing of an array to retreive data in O(1) time. Before being stored in an the direct-address table, the key is hashed (with a hash-function) to obtain it's position in the direct-access table. When requesting for key, the request is hashed, and the value stored at the location of the hash is then returned as the matching value for the given input key.",
         "limitations":"One limitation of hash tables are that if the input set is too large, we lose the benefits of direct-addressing. Time-complexity them increases to up to O(n)"
-        },
+    },
     "direct-addressing": {
         "definition":"Direct Addressing uses a Direct-address table that stores values at fixed points in an array, where the position in which a value is stored is based on the hash genrated of its key thus, allowing an access time of O(1)",
         "definition-img":"https://www.cdn.geeksforgeeks.org/wp-content/uploads/hmap.png"
-        },
+    },
     "hash-fuction": {
         "definition":"A hash function maps a given key to a set range of m slots in a direct-access table. A good hash function satisfies (approximately) the assumption of simple uniform hashing, where each key is equally likely to hash to any of the m slots, independently of where any other keys are hashed to. Some of the hashing methods include the division method and the multiplication method",
         "definition-img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hash_table_4_1_1_0_0_1_0_LL.svg/1200px-Hash_table_4_1_1_0_0_1_0_LL.svg.png",
         "how-work": "Since arrays are addressed within the set of natural numbers, a hash function works to interpret the input key as a natural number. For example, a given character string will be represented as an integer"
-        },
+    },
     "binary-search-tree": {
         "definition" : "Binary Search Tree is a node-based binary tree data structure which has the following properties: 1, The left subtree of a node contains only nodes with keys lesser than the node’s key. 2, The right subtree of a node contains only nodes with keys greater than the node’s key. 3,The left and right subtree each must also be a binary search tree.",
         "definition-img" : "https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png",
         "how-work" : "To search for the key 13 in the tree, we follow the path 15 -> 6 -> 7 -> 13 from the root. The minimum key in the tree is 2, which is found by following left pointers from the root. The maximum key 20 is found by following right pointers from the root.The successor of the node with key 15 is the node with key 17, since it is the minimum key in the right subtree of 15. The node with key 13 has no right subtree, and thus its successor is its lowest ancestor whose leR child is also an ancestor. In this case, the node with key 15 is its successor.",
         "how-work-link": "https://i.ibb.co/6mWHpQ1/Untitled.png"
-        },
+    },
     "test-entry": {
         "definition":"this is a test entry"
-        }
+    },
+    "divide-and-conquer": {
+        "how-work": "Break the problem into several sub-problems that are similar to the original problem but smaller in size, solve the problem recursively , and then combine these solutions to create a solution of the original problem.",
+        "example": "Merge Sort, Quick Sort, Heap Sort, Max Heap,Binary Search"
+    },
+    "mergesort": {
+        "time-complexity": "O(nlogn)",
+        "definition": "The merge() function is used for merging two halves The Mergesort() function recursively call itself to divide the array till size becomes one",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/TBQQCdJ/Desktop-Screenshot-2021-06-01-10-23-17-21.png"
+    },
+    "quicksort": {
+        "time-complexity": "Best case: O(nlogn)   Worst Case : O(n2)",
+        "definition": "Sort by *choosing a pivot point. Best case when pivot splits the array evenly. Elements smaller than the pivot are on the left, and elements larger than the pivot on the right. Worst case when one side of partition always has no element",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/7NbFM4m/Quick-Sort-Example.png"
+    },
+    "heapsort": {
+        "time-complexity": "Get Max/Min Element : O(1)   Remove/Insert an element for both Min/Max Heap : O(log n)    Heapsort : O(nlog n) ",
+        "definition": "A Heap is a tree-based data structure. Each node of the tree corresponds to an element of the array.",
+        "how-work": "Max Heap - Key present at root node must be greatest among all children. This property must then be true for each sub- tree    Min Heap - Key present at root node must be the minimum among all children. This property must then be true for each sub-tree"
+    },
+    "binary-search": {
+        "time-complexity": "O(log n)",
+        "definition": "Binary Search finds the position of a target value within a sorted array by comparing the target value to the middle element of the array",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/gFcPXqh/Binary-Search-Example.png"
+    },
+    "graph": {
+        "terminologies": "Graph, G = (V,E) consist of set of vertices V and edges E. Edges are connections between vertices. Vertices are called neighbours if they are adjacent and connected by an edge.   This is written as v = {1,2,3,4}  and E={(1,2),(2,2)}",
+        "definition": "A graph is a non-linear data structure that can also capture relationship between data",
+        "how-work": "Directed Graph : Edges of graph represent specific direction from one vortex to the other   Undirected Graphs : Edges have no specific direction Weighted Directed Graphs : Edges represent specific direction and weight   Undirected Weighted Graph: No specific direction on edges but theres weight for each edge ",
+        "representation-img": "https://i.ibb.co/tpF1JRb/Adjacency-List-c-Adjacency-Matrix-b.png",
+        "representation": " "
+    },
+    "depth-first-search": {
+        "definition": "Depth First Search (DFS) uses the stack for storing the visited vertices. Uses a recursive fashion where vertices are explored along a path",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/ZWmZsxM/Depth-First-Search.png"
+    },
+    "breadth-first-search": {
+        "definition": "Breadth First Search (BFS) uses a queue for storing the visited vertices. The emphasize is on the vertices of the graph. First, one vertex is selected and visited then marked, consecutively vertices adjacent to the visited vertex are then visited and stored in the queue ",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/2SHB57n/Breadth-First-Search-Example.png"
+    },
+    "topological-sort": {
+        "definition": "Topological sort takes a directed acyclic graph and produces a linear ordering of all its vertices. Directed acyclic graphs are used in many applications to indicate the precedence of events. ",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/G20b0Vb/Topological-Sort-Example.png"
+    },
+    "minimum-spanning-trees": {
+        "definition": "Minimum spanning tree is a spanning tree that has minimum weight than all other spanning trees of the same graph.",
+        "how-work": "Kruskal's Algortihm & Prim's Algorithm"
+    },
+    "prim's-algorithm": {
+        "definition": "This algorithm selects the root vertex, then selects the shortest edge connected to visited vertices. As it traverses this way, it generates the minimum cost spanning tree starting from the root node",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/8YW7vCX/Prim-s-Algorithm-Example.png"
+    },
+    "kruskal's-algorithm": {
+        "definition": "This algorithm selects the shortest edge, then selects the next shortest edge in the graph. As it traverses this way, it generates the minimum cost spanning tree starting from the least weighted edge",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/7W5VM05/Kruskal-s-Algorithm-Example.png"
+    },
+    "shortest-path": {
+        "definition": "Shortest path problem is an optimization problem that can be solved using greedy (Djikstra's Algorithm) or dynamic programming (Bellman-Ford Algorithm) approach",
+        "how-work": "Single-Source Shortest Paths & All-Pairs Shortest Paths"
+    },
+    "single-source-shortest-path": {
+        "how-work": "The aim is to find shortest path from S to :   Another vertex   All other vertices",
+        "relax": "Essentially the shortest calculated paths from two locations ",
+        "terminologies": " ",
+        "terminologies-img": "https://i.ibb.co/C1hzZ6p/Single-Source-Shortest-Path-Terminologies.png"
+    },
+    "dijkstra's-algorithm": {
+        "definition": "This algorithm solves the single-source shortest paths problems on weighted and directed graphs, namely G = (V,E) where all edge-weights are non-negative.",
+        "purpose": "Finds shortest path from S to:   another vertex   every other vertex ",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/ykSt4Vh/Dijkstra-s-Algorithm-Example.png"
+    },
+    "bellman-ford-algorithm": {
+        "definition": "This algorithm applies dynamis programming strategy where we try out all possible paths then select the best solution. This algorithm however works in negative edges too",
+        "purpose": "Finds shortest path from S to:   another vertex   every other vertex ",
+        "how-work": " ",
+        "how-work-img": "https://i.ibb.co/vqpKCnV/Bellman-Ford-Algorithm.png"
+    }
   }
   
