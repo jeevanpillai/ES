@@ -11,6 +11,7 @@ while (query != "/stop"):
   words = query.split(" ")
 
   str_object, str_attribute = "", ""
+  image_link = ""
 
   if("what" in words and "is" in words):    #query 1: what is the <key> of <object>   OR   what is <object>
     
@@ -34,6 +35,7 @@ while (query != "/stop"):
       str_attribute = "definition"
 
     if (str_object != "" and str_attribute != ""):
+
       print(data[str_object][str_attribute])
     else:
       print("query not found")
