@@ -25,15 +25,15 @@ while (query != "/stop"):
         if(i != len(words)-1):
           str_object += "-"
 
-    if("the" in words):
+    if ("the" in words):
       for i in range(words.index("the")+1, words.index("of")):
         str_attribute += words[i]
-        if(i != len(words)-1):
+        if(i != words.index("of")-1):
           str_attribute += "-"
     else:
       str_attribute = "definition"
 
-    if(str_object != "" and str_attribute != ""):
+    if (str_object != "" and str_attribute != ""):
       print(data[str_object][str_attribute])
     else:
       print("query not found")
