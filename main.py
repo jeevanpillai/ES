@@ -50,7 +50,7 @@ while(True):
         if(i != words.index("work")-1):
           str_object += "-"
 
-  if(str_attribute not in data[str_object]):
+  if(str_attribute not in data[str_object]):  ## defaults attributes to "definition" if attribute not found in data set
     str_attribute = "definition"
 
   print("Object: ", str_object)
