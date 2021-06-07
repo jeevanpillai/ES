@@ -50,11 +50,20 @@ while(True):
         if(i != words.index("work")-1):
           str_object += "-"
 
+  if(str_object not in data):
+    if("algorithm" in str_object):
+      if(str_object[0:str_object.index("algorithm")-1] in data):
+        str_object = str_object[0:str_object.index("algorithm")-1]
+    else:
+      if(str_object+str("-algorithm") in data):
+        str_object = str_object+str("-algorithm")
+
+
   if(str_object in data and str_attribute not in data[str_object]):  ## defaults attributes to "definition" if attribute not found in data set
     str_attribute = "definition"
 
-  print("Object: ", str_object)
-  print("Attribute: ", str_attribute)   
+  ##print("Object: ", str_object)
+  ##print("Attribute: ", str_attribute)   
 
   if (str_object in data and str_attribute in data[str_object]): 
     print(data[str_object][str_attribute])
