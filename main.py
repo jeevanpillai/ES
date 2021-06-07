@@ -1,7 +1,29 @@
 import json
+import enchant
+import sys
+#spell-checker.py
 
 with open('jsonFiles/master.json') as file:
   data = json.load(file)
+
+f = open("object_dict.txt", "w")
+for s in data.keys():
+  f.write(s+"\n")
+f.close()
+
+att_list = []
+for obj in data:
+  for s in data.get(obj):
+    if (s not in att_list):
+      att_list.append(s)
+
+f = open("att_dict.txt", "w")
+for s in att_list:
+  f.write(s+"\n")
+f.close()
+
+obj_dict = enchant.PyPWL("object_dict.txt")
+att_dict = enchant.PyPWL("att_dict.txt")
 
 words = []
 query = ""
@@ -52,13 +74,42 @@ while(True):
 
   if(str_object not in data):
     if("algorithm" in str_object):
+      if(not obj_dict.check(str_object[0:str_object.index("algorithm")-1])):
+        suggestions = obj_dict.suggest(str_object[0:str_object.index("algorithm")-1])
       if(str_object[0:str_object.index("algorithm")-1] in data):
         str_object = str_object[0:str_object.index("algorithm")-1]
+      elif(len(suggestions) > 0 ):
+        if(suggestions[0] in data):
+          print("Object Corrected To: ", suggestions[0])
+          str_object = suggestions[0]
     else:
+      if(not obj_dict.check(str_object+str("-algorithm"))):
+        suggestions = obj_dict.suggest(str_object+str("-algorithm"))
       if(str_object+str("-algorithm") in data):
         str_object = str_object+str("-algorithm")
+      elif(len(suggestions) > 0 ):
+        if(suggestions[0] in data):
+          print("Object Corrected To: ", suggestions[0])
+          str_object = suggestions[0]
 
+  if(str_object not in data):
+    obj_exists = obj_dict.check(str_object)
+    if(not obj_exists):
+      suggestions = obj_dict.suggest(str_object)
+      if(len(suggestions) >= 1):
+        if(suggestions[0] in data):
+          print("Object Corrected To: ", suggestions[0])
+          str_object = suggestions[0]
 
+  if(str_object in data):
+    if(str_attribute not in data[str_object]):
+        att_exists = att_dict.check(str_attribute)
+        if(not att_exists):
+          suggestions = att_dict.suggest(str_attribute)
+          if(len(suggestions) > 0):
+            print("Attribute Corrected To: ", suggestions[0])
+            str_attribute = suggestions[0]
+    
   if(str_object in data and str_attribute not in data[str_object]):  ## defaults attributes to "definition" if attribute not found in data set
     str_attribute = "definition"
 
