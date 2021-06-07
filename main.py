@@ -7,6 +7,7 @@ with open('jsonFiles/master.json') as file:
   data = json.load(file)
 
 f = open("object_dict.txt", "w")
+f.write("algorithm\n")
 for s in data.keys():
   f.write(s+"\n")
 f.close()
@@ -71,6 +72,16 @@ while(True):
         str_object += words[i]
         if(i != words.index("work")-1):
           str_object += "-"
+
+  alg = str_object.split("-")
+  if(not obj_dict.check(alg[len(alg)-1])):
+    suggestions = obj_dict.suggest(alg[len(alg)-1])
+    if(len(suggestions) > 0):
+      if(suggestions[0] == "algorithm"):
+        str_object = ""
+        for i in range (len(alg)-1):
+          str_object += alg[i]
+        str_object += "-algorithm"
 
   if(str_object not in data):
     if("algorithm" in str_object):
